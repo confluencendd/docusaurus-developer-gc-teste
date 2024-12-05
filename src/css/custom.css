@@ -1,0 +1,128 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --ndd-white-color: #ffffff;
+  --ndd-text-color: #4e4e4e;
+  --ndd-links-color: #0065ff;
+
+  --ndd-blue10-color: #e9f7fd;
+  --ndd-blue100-color: #24b5ed;
+  --ndd-blue120-color: #1d92bf;
+
+  --ndd-yellow10-color: #fffae8;
+  --ndd-yellow30-color: #fff1bc;
+  --ndd-yellow100-color: #fed222;
+  --ndd-mustard10-color: #fff7e8;
+  --ndd-mustard100-color: #feac22;
+
+  --ndd-red10-color: #feebec;
+  --ndd-red30-color: #fcc2c8;
+  --ndd-red100-color: #f53649;
+  --ndd-red130-color: #ac2633;
+
+  --ndd-green10-color: #e5f5f2;
+  --ndd-green100-color: #009e7e;
+
+  --ndd-gray90-color: #f9f9f9;
+  --ndd-gray100-color: #f0f0f0;
+  --ndd-gray110-color: #a8a8a8;
+  --ndd-gray130-color: #888888;
+
+  --ndd-purple10-color: #eae3ff;
+  --ndd-purple100-color: #480f7a;
+
+  --ndd-dark-color: #1f2533;
+  --ndd-dark-hover-color: #151c2b;
+
+  --ndd-size-tyne: 4px;
+  --ndd-size-small: 8px;
+  --ndd-size-medium: 16px;
+  --ndd-size-large: 24px;
+  --ndd-size-xlarge: 48px;
+  --ndd-special-font: "MuseoModerno", sans-serif;
+  --ndd-primary-font: "Poppins", sans-serif;
+  --ndd-secondary-font: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  color: var(--ndd-text-color);
+}
+
+p,
+ul,
+ol {
+  color: var(--ndd-text-color);
+  font-family: var(--ndd-secondary-font);
+}
+
+a {
+  font-family: var(--ndd-secondary-font);
+}
+
+h1 {
+  font-size: 48px;
+  font-family: var(--ndd-primary-font);
+}
+
+h2 {
+  font-size: 32px;
+  font-family: var(--ndd-primary-font);
+}
+
+h3 {
+  font-size: 26px;
+  font-family: var(--ndd-primary-font);
+}
+
+h4 {
+  font-size: 20px;
+  font-family: var(--ndd-primary-font);
+}
+h5 {
+  font-size: 18px;
+  font-family: var(--ndd-primary-font);
+}
+h6 {
+  font-size: var(--ndd-size-medium);
+  font-family: var(--ndd-primary-font);
+}
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
