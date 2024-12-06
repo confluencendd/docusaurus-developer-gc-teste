@@ -8,24 +8,24 @@ As etapas a seguir o ajudarão a iniciar sua jornada para integração com o NDD
 
 ## Autorização
 
-Antes de realizar qualquer integração, é necessário ter as suas credenciais, `clientId` e `secret`, para gerar um token de acesso, que valida suas solicitações e protege os dados trafegados.
+Antes de realizar qualquer integração, é necessário obter as suas credenciais, `clientId` e `secret`, para gerar um token de acesso, que valida suas solicitações e protege os dados trafegados.
 
-### Onde eu consigo minhas credenciais?
-As credenciais serão enviadas pelo nosso time de implantação, contendo as seguintes informações:
+### Onde eu consigo as minhas credenciais?
+As credenciais serão enviadas pela NDD, contendo as seguintes informações:
 - `clientId`
 - `secret`
 - `scope`
-- 
-| **Escopo**            | **Descrição**                                                                                    |
-| --------------------- | ------------------------------------------------------------------------------------------------ |
-| **ndd-core-api**      | API masterdata que permite você criar e consultar os dados principais do processo de integração. |
-| **ndd-emissions-api** | API que permite que você consulte os dados de CIOT, Vale-pedágio obrigatório e MDF-e.            |
+ 
+| **Escopo**            | **Descrição**                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **ndd-core-api**      | API masterdata que permite criar e consultar os dados principais do processo de integração e enviar a viagem. |
+| **ndd-emissions-api** | API que permite consultar os dados de CIOT, Vale-pedágio obrigatório e MDF-e.                                 |
 
 
 ## Obter o token de acesso
-O token de acesso é uma string qual contém as credenciais e permissões para serem usadas para acessar os recursos da nossa API (exemplo, criar a viagem, criar os motoristas, criar as filais, etc.)
+O token de acesso é uma `string` que contém as credenciais e permissões para serem usadas para acessar os recursos da nossa API (exemplo, criar a viagem, criar os motoristas, criar as filais, etc.)
 
-Com o seu `clientId`, `secret` e `scope` em maõs, abra o Postman, ou qualquer outra ferramenta da sua preferência.
+Com o `clientId`, `secret` e `scope` utilize uma ferramenta para chamadas REST com as informações abaixo:
 
 1. Em **método** selecione `POST`
 2. Em **URL** digite `[URL_BASE]/api/auth/token`
@@ -33,7 +33,7 @@ Com o seu `clientId`, `secret` e `scope` em maõs, abra o Postman, ou qualquer o
 4. No **corpo** da requisição envie a informação do `clientId`, `secret`, `scope` e `grant_type`
 
 :::note[Nota]
-O `grant_type` deve ser enviado com o valor `client_credentials`. 
+O `grant_type` deve ser enviado com o valor `client_credentials` fixo.
 :::
 
 ### Exemplo de requisição
@@ -55,9 +55,13 @@ Content-Type: application/json
 }
 ```
 
-5. O seu token de acesso será gerado contendo duas informações:
-   1. `accessToken`: String com o seu token de Autorização
+5. O token de acesso será gerado contendo duas informações:
+   1. `accessToken`: String com o token de Autorização
    2. `expiresIn`: Tempo de expiração do token em minutos
+   
+:::note[Nota]
+O token deve ser renovado após a sua expiração, seguindo o tópico [Obter o token de acesso](#obter-o-token-de-acesso).
+:::
 
 ```json
 {
@@ -67,7 +71,7 @@ Content-Type: application/json
 ```
 
 :::tip[PRONTO]
-Agora você poderá utilizar todos os recursos da API do NDD Elog. Basta enviar o token como parte do cabeçalho Authorization nas próximas requisições.
+Agora é possível utilizar todos os recursos da API do NDD Elog, enviando o token como parte do cabeçalho `Authorization` nas próximas requisições.
 
 ```text
  Authorization: Bearer {accessToken}

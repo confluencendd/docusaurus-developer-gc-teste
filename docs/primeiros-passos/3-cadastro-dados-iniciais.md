@@ -64,7 +64,7 @@ Authorization: Bearer {accessToken}
 
 ### Prestador de transporte
 
-Representa a entidade responsável pela execução do transporte. Pode ser uma empresa (CNPJ) ou um transportador autônomo (CPF).
+Representa a entidade responsável pela execução do transporte. Pode ser uma empresa ETC (CNPJ) ou um transportador autônomo TAC (CPF).
 
 **Exemplo de requisição**
 

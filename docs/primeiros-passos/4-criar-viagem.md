@@ -214,9 +214,9 @@ Authorization: Bearer {accessToken}
 
 ## Uso de Identificadores:
 
-Você recorda que realizamos o [**Cadastro dos dados iniciais**](02-cadastro-dados-iniciais)?
+Você recorda que realizamos o [**Cadastro dos dados iniciais**](./cadastro-dados-iniciais)?
 
-Agora que você já possui estas informações cadastradas, basta passar os **IDs dessas entidades** na requisição. Por exemplo, em vez de enviar todos os dados do prestador, você pode simplesmente incluir o Identificador do prestador já cadastrado.
+Com os IDs dos cadastros realizados anteriormente, é possível informálos na requisição, diminuindo a complexidade e o volume de dados transacinoados. Por exemplo, ao invés de enviar todos os **dados do prestador**, você pode simplesmente incluir o **Identificador do prestador** já cadastrado.
 
 :::tip[DICA]
 Para capturar os identificadores, você pode utilizar os métodos `GET` dos endpoints dos dados iniciais. Acesse a nossa [**Referência**](#) para saber mais.

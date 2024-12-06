@@ -27,7 +27,7 @@ Para cada etapa do processamento das informações da viagem, o NDD Elog irá ge
 
 
 ### O que eu preciso para receber as notificações?
-Para integrar a API do NDD Elog e receber notificações importantes, como **ocorrências da viagem** e **emissão de documentos fiscais**, você precisará fornecer algumas informações essenciais.
+Para integrar a API do NDD Elog e receber notificações importantes, como **ocorrências da viagem** e **emissão de documentos fiscais**, será necessário fornecer os dados de autorização e o endpoint `POST`, conforme abaixo:
 
 #### Autorização
 - Disponibilizar para a NDD os dados de autorização para envio das notificações para a sua API.

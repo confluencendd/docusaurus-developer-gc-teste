@@ -6,9 +6,10 @@ id: "envio-cte"
 O **Conhecimento de Transporte Eletrônico (CT-e)** é um documento fiscal essencial no fluxo logístico, utilizado para registrar e validar operações de transporte de cargas. 
 
 ## Quem pode enviar o CT-e para o NDD Elog?
+Os documentos autorizados podem ser enviados ao NDD Elog pela transportadora ou pelo embarcador, conforme abaixo:
 
-- **Embarcadores:** Empresas que contratam o serviço de transporte e desejam emitir o CT-e em nome do transportador para registrar a movimentação de suas mercadorias.
-- **Transportadores:** Empresas responsáveis pela execução do serviço de transporte, que emitem o CT-e para comprovar o serviço prestado.
+- **Transportadoras:** Após a autorização do documento na SEFAZ.
+- **Embarcadores:** Após a recepção dos documentos emitidos pela transportadora ou quando emitido documentos em nome das transportadoras.
 
 ### Exemplo de envio do CT-e
 
