@@ -5,16 +5,6 @@ id: "cadastro-dados-iniciais"
 # Dados iniciais
 Antes de iniciar a integração, é importante entender e organizar as informações fundamentais para o funcionamento das operações, como **filiais**, **prestadores de transporte**, **veículos** e **motoristas**. Eles garantem que a integração seja realizada de forma eficiente e sem erros.
 
-## API de homologação
-
-Antes de iniciar a integração com a API em produção, é **altamente recomendável** que você utilize o **ambiente de homologação** para realizar seus testes. O ambiente de homologação é uma versão segura e controlada da API, onde você pode validar todas as funcionalidades e garantir que os dados estão sendo enviados corretamente sem impactar as operações reais.
-
-:::tip[DICA]
-Aqui está a URL base da API de homologação: `https://homologacao.nddelog.com/api`
-:::
-
----
-
 ## **Cadastro dos dados iniciais**
 
 :::info[informação]
@@ -31,13 +21,13 @@ Representa a unidade de operação do cliente embarcador (empresa que contrata o
 - Método: `POST`
 - URL: `[URL_BASE]/api/v1/Filial`
 
-**Cabeçalhos:**
+**Cabeçalhos**
 ```json
 Content-Type: application/json
 Authorization: Bearer {accessToken}
 ```
 
-**Body:**
+**Corpo**
 ```json
 {
   "Identificador": "filial001",
@@ -81,13 +71,13 @@ Representa a entidade responsável pela execução do transporte. Pode ser uma e
 - Método: `POST`
 - URL: `[URL_BASE]/api/v1/Prestador`
 
-**Cabeçalhos:**
+**Cabeçalhos**
 ```json
 Content-Type: application/json
 Authorization: Bearer {accessToken}
 ```
 
-**Body:**
+**Corpo**
 ```json
 {
   "Identificador": "prestador123",
@@ -144,13 +134,13 @@ Veículo utilizado para a movimentação da carga.
 - Método: `POST`
 - URL: `[URL_BASE]/api/v1/Veiculo`
 
-**Cabeçalhos:**
+**Cabeçalhos**
 ```json
 Content-Type: application/json
 Authorization: Bearer {accessToken}
 ```
 
-**Body:**
+**Corpo**
 ```json
 {
   "Identificador": "veiculo123",
@@ -221,13 +211,13 @@ Necessário em operações que exigem CIOT, vale pedágio obrigatório e/ou emis
 - Método: `POST`
 - URL: `[URL_BASE]/api/v1/Proprietario`
 
-**Cabeçalhos:**
+**Cabeçalhos**
 ```json
 Content-Type: application/json
 Authorization: Bearer {accessToken}
 ```
 
-**Body:**
+**Corpo**
 ```json
 {
   "Identificador": "prestador123",
@@ -265,13 +255,13 @@ Pessoa física responsável por operar o veículo durante o transporte.
 - Método: `POST`
 - URL: `[URL_BASE]/api/v1/Motorista`
 
-**Cabeçalhos:**
+**Cabeçalhos**
 ```json
 Content-Type: application/json
 Authorization: Bearer {accessToken}
 ```
 
-**Body:**
+**Corpo**
 ```json
 {
   "Identificador": "motorista123",

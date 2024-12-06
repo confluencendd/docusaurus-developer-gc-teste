@@ -12,29 +12,19 @@ Este endpoint recebe informações detalhadas sobre a viagem, incluindo os dados
 Se você já possui os dados iniciais cadastrados, basta enviar os seus [**identificadores**](#uso-de-identificadores) no cadastro da viagem.
 :::
 
----
-
-## API de homologação
-
-Antes de iniciar a integração com a API em produção, é **altamente recomendável** que você utilize o **ambiente de homologação** para realizar seus testes. O ambiente de homologação é uma versão segura e controlada da API, onde você pode validar todas as funcionalidades e garantir que os dados estão sendo enviados corretamente sem impactar as operações reais.
-
-:::tip[DICA]
-Aqui está a URL base da API de homologação: `https://homologacao.nddelog.com/api`
-:::
-
 
 **Exemplo de requisição**
 
 - Método: `POST`
 - URL: `[URL_BASE]/api/v1/Viagem`
 
-**Cabeçalhos:**
+**Cabeçalhos**
 ```json
 Content-Type: application/json
 Authorization: Bearer {accessToken}
 ```
 
-**Body:**
+**Corpo**
 ```json
 {
   "Identificador": "viagem001",
@@ -237,13 +227,13 @@ Para capturar os identificadores, você pode utilizar os métodos `GET` dos endp
 - Método: `POST`
 - URL: `[URL_BASE]/api/v1/Viagem`
 
-**Cabeçalhos:**
+**Cabeçalhos**
 ```json
 Content-Type: application/json
 Authorization: Bearer {accessToken}
 ```
 
-**Body:**
+**Corpo**
 ```json
 {
   "Identificador": "viagem123",

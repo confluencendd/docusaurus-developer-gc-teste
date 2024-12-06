@@ -64,7 +64,7 @@ Os dados devem ser enviados para a NDD para fins de configuração do webhook de
 Content-Type: application/json
 Authorization: Bearer <nosso_token_de_acesso>
 ```
-**Body:**
+**Corpo**
 ```json
 {
   "Type": 1,
