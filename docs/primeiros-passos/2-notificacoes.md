@@ -6,7 +6,7 @@ id: "notificacoes"
 O NDD Elog utiliza **webhook** para realizar o envio de notificações de cada etapa do processamento da viagem. 
 
 :::warning[Atenção]
-Colocar a informação de pre requisito para envio das notificações
+Os dados devem ser enviados para a NDD para fins de configuração do webhook de notificações.
 :::
 
 ## Como o webhook funciona no NDD Elog?
@@ -29,6 +29,9 @@ Para cada etapa do processamento das informações da viagem, o NDD Elog irá ge
 ### O que eu preciso para receber as notificações?
 Para integrar a API do NDD Elog e receber notificações importantes, como **ocorrências da viagem** e **emissão de documentos fiscais**, será necessário fornecer os dados de autorização e o endpoint `POST`, conforme abaixo:
 
+:::warning[Atenção]
+Os dados devem ser enviados para a NDD para fins de configuração do webhook de notificações.
+:::
 #### Autorização
 - Disponibilizar para a NDD os dados de autorização para envio das notificações para a sua API.
 
@@ -38,9 +41,6 @@ Para integrar a API do NDD Elog e receber notificações importantes, como **oco
 | client_id       | Identificador único para autenticação.      |
 | client_secret   | Chave secreta para autenticação.            |
 
-:::warning[Atenção]
-Os dados devem ser enviados para a NDD para fins de configuração do webhook de notificações.
-:::
 
 #### Endpoint de envio das notificações
 

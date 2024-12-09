@@ -13,12 +13,7 @@ O CIOT (Código Identificador da Operação de Transporte) é utilizado para ide
 ### Exemplo de requisição
 
 - Método: `GET`
-- URL: `[URL_BASE]/api/ciot/{ciot_id}`
-
-**URL:**
-```json
-/api/ciot/3fa85f64-5717-4562-b3fc-2c963f66afa6
-```
+- URL: `[URL_BASE]/api/v1/CIOT`
 
 **Cabeçalhos**
 ```json
@@ -50,12 +45,7 @@ O Vale-pedágio obrigatório é utilizado para o pagamento do pedágio durante o
 ### Exemplo de requisição
 
 - Método: `GET`
-- URL: `[URL_BASE]/api/pedagio/{pedagio_id}`
-
-**URL:**
-```json
-/api/pedagio/3fa85f64-5717-4562-b3fc-2c963f66afa6
-```
+- URL: `[URL_BASE]/api/v1/Pedagio`
 
 **Cabeçalhos**
 ```json
@@ -87,12 +77,11 @@ O MDF-e (Manifesto Eletrônico de Documentos Fiscais) é utilizado para document
 ### Exemplo de requisição
 
 - Método: `GET`
-- URL: `[URL_BASE]/api/mdfe/{mdfe_id}`
+- URL: `[URL_BASE]/api/v1/MDFE`
 
-**URL:**
-```json
-/api/mdfe/3fa85f64-5717-4562-b3fc-2c963f66afa6
-```
+:::note[nota]
+Você pode utilizar o identificador do documento como parâmetro da URL `[URL_BASE]/api/v1/MDFE/{id}`
+:::
 
 **Cabeçalhos**
 ```json
@@ -107,10 +96,107 @@ Authorization: Bearer {accessToken}
     {
       "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
       "IdentificadorViagem": "string",
-      "Status": 1,
-      "Protocolo": "string",
-      "Numero": "string",
-      "MensagensFalha": "string"
+      "Status": "string",
+      "Serie": 0,
+      "Numero": 0,
+      "ValorTotal": 0,
+      "PesoBrutoTotal": 0,
+      "PercursoInterestadual": "string",
+      "DataEncerramento": "2024-12-09T13:24:27.305Z",
+      "ProtocoloSefaz": "string",
+      "MensagensFalha": "string",
+      "LocalRetirada": {
+        "IBGE": 0,
+        "Cidade": "string",
+        "Estado": "string",
+        "CEP": 0,
+        "Logradouro": "string",
+        "Numero": "string",
+        "Complemento": "string",
+        "Bairro": "string"
+      },
+      "LocalEntrega": {
+        "IBGE": 0,
+        "Cidade": "string",
+        "Estado": "string",
+        "CEP": 0,
+        "Logradouro": "string",
+        "Numero": "string",
+        "Complemento": "string",
+        "Bairro": "string"
+      },
+      "Emitente": {
+        "CNPJ": "string",
+        "IE": 0,
+        "Nome": "string",
+        "Endereco": {
+          "IBGE": 0,
+          "Cidade": "string",
+          "Estado": "string",
+          "CEP": 0,
+          "Logradouro": "string",
+          "Numero": "string",
+          "Complemento": "string",
+          "Bairro": "string"
+        }
+      },
+      "CIOTs": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "IdentificadorViagem": "string",
+          "Status": 1,
+          "Protocolo": "string",
+          "Numero": "string",
+          "MensagensFalha": "string"
+        }
+      ],
+      "Pedágios": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "IdentificadorViagem": "string",
+          "Status": 1,
+          "Protocolo": "string",
+          "Numero": "string",
+          "MensagensFalha": "string"
+        }
+      ],
+      "VeiculoTracao": {
+        "CategoriaCombinacao": "string",
+        "Placa": "string",
+        "Tara": 0,
+        "TipoRodado": "string",
+        "TipoCarroceria": "string",
+        "Capacidade": 0
+      },
+      "VeiculosReboque": [
+        {
+          "CategoriaCombinacao": "string",
+          "Placa": "string",
+          "Tara": 0,
+          "TipoRodado": "string",
+          "TipoCarroceria": "string",
+          "Capacidade": 0
+        }
+      ],
+      "Condutor": {
+        "Nome": "string",
+        "CPF": "string"
+      },
+      "ProprietarioVeiculo": {
+        "IBGE": "string",
+        "RNTRC": 0,
+        "Estado": "string",
+        "Nome": "string"
+      },
+      "NFes": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "ChaveAcesso": "string",
+          "IBGERetirada": 0,
+          "IBGEEntrega": "string",
+          "EstaEntregue": true
+        }
+      ]
     }
   ]
 }

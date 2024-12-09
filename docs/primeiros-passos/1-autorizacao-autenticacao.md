@@ -28,7 +28,7 @@ O token de acesso é uma `string` que contém as credenciais e permissões para 
 Com o `clientId`, `secret` e `scope` utilize uma ferramenta para chamadas REST com as informações abaixo:
 
 1. Em **método** selecione `POST`
-2. Em **URL** digite `[URL_BASE]/api/auth/token`
+2. Em **URL** digite `[URL_BASE]/api/v1/auth/token`
 3. No **cabeçalho** selecione `Content-Type: application/json`
 4. No **corpo** da requisição envie a informação do `clientId`, `secret`, `scope` e `grant_type`
 
@@ -38,7 +38,7 @@ O `grant_type` deve ser enviado com o valor `client_credentials` fixo.
 
 ### Exemplo de requisição
 - Método: `POST`
-- URL: `[URL_BASE]/api/auth/token`
+- URL: `[URL_BASE]/api/v1/auth/token`
 
 **Cabeçalhos**
 ```json
@@ -60,7 +60,7 @@ Content-Type: application/json
    2. `expiresIn`: Tempo de expiração do token em minutos
    
 :::note[Nota]
-O token deve ser renovado após a sua expiração, seguindo o tópico [Obter o token de acesso](#obter-o-token-de-acesso).
+O token deve ser renovado após a sua expiração, seguindo o tópico [**Obter o token de acesso**](#obter-o-token-de-acesso).
 :::
 
 ```json

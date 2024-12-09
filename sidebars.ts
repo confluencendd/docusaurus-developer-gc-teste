@@ -56,7 +56,7 @@ const sidebars: SidebarsConfig = {
           },
           items: [
             {
-              label: "4.1. Notificação do processamento da viagem",
+              label: "4.1. Retorno do envio da viagem",
               type: "doc",
               id: "primeiros-passos/notificacao-viagem",
             },

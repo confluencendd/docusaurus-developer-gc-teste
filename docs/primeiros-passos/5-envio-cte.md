@@ -15,7 +15,7 @@ Os documentos autorizados podem ser enviados ao NDD Elog pela transportadora ou 
 
 **CT-e enviado com sucesso:**
 - Método: `POST`
-- URL: `[URL_BASE]/api/v1/cte`
+- URL: `[URL_BASE]/api/v1/Documento/Cte`
 
 **Cabeçalhos**
 ```json
